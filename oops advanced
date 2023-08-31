@@ -3,8 +3,11 @@ fully encapsulated class--all data members are marked private for that class
 advantages of encapsulation--information-hiding / data-hiding / security aspect stonks / we can make class read-only / help in unit testing
 
 inheritance--properties of one class is inherited to another class.
+                                    class ParentClassName{
+                                    };
                                     class subclassName: accessmodifier ParentClassName{
                                     };
+protected is similar to private but it can also be used in childClass unlike private.
 parentclass is also called as super class or base class.
 mode of inheritance---        public         public------->public
                               public         private------>private
@@ -18,3 +21,5 @@ mode of inheritance---        public         public------->public
                               private        protected---->N.A
                               private        private------>N.A
 
+types of inheritance--single inh / multi-level / multiple / hybrid / heirarchial
+single inheritance--
