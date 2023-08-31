@@ -16,5 +16,12 @@ for accessing dynamically allocated , either star or arrow can be used
 constructor---no return type / no i.p parameter / object creation invoke
 when object is created in main , constructor is called and it is nothing but a function inside the class with class name
 when parameterised constructor is given, the default constructor dies
-'this' keyword is a pointer which stores the address of current object
+/this' keyword is a pointer which stores the address of current object
 copy constructor--in this one object properties becomes equal to another object properties
+....
+destructor---deallocates the used memory / no return type / no i.p paramter / same as classname / called in same way as constructor
+the difference bw constructor and destructor is that '~' sign comes before destructor
+destructor is automatically called for static allocation
+destructor has to be called manually for dynamic allocation
+const keyword / initialization-list homework
+static keyword--with help of this,the property can be accessed without creating object
