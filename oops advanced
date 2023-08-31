@@ -1,3 +1,20 @@
 encapsulation--wrapping up data members and functions inside single entity or class
 fully encapsulated class--all data members are marked private for that class
 advantages of encapsulation--information-hiding / data-hiding / security aspect stonks / we can make class read-only / help in unit testing
+
+inheritance--properties of one class is inherited to another class.
+                                    class subclassName: accessmodifier ParentClassName{
+                                    };
+parentclass is also called as super class or base class.
+mode of inheritance---        public         public------->public
+                              public         private------>private
+                              public         protected---->protected
+                              -
+                              protected      public------->protected
+                              protected      protected---->protected
+                              protected      private------>private
+                              -
+                              private        public------->N.A
+                              private        protected---->N.A
+                              private        private------>N.A
+
