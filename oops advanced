@@ -1,0 +1,3 @@
+encapsulation--wrapping up data members and functions inside single entity or class
+fully encapsulated class--all data members are marked private for that class
+advantages of encapsulation--information-hiding / data-hiding / security aspect stonks / we can make class read-only / help in unit testing
