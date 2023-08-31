@@ -46,4 +46,7 @@ hybrid inheritance-- combination of different types of inheritance
                              class Male:public Human, public Female{
                              };
 
-inheritance ambiguity--- 
+inheritance ambiguity--- A->C & B>C
+                         when C tries to access a function that is present in both A and B then it cannot be accessed through normal method.
+                         This is solved by scope resoltion operator '::'.
+                         objectOfC.A::func();
