@@ -1,6 +1,6 @@
 encapsulation--wrapping up data members and functions inside single entity or class
 fully encapsulated class--all data members are marked private for that class
-advantages of encapsulation--information-hiding / data-hiding / security aspect stonks / we can make class read-only / help in unit testing
+advantages of encapsulation--information-hiding / data-hiding / security aspect stonks / can make class read-only / help in unit testing
 
 inheritance--properties of one class is inherited to another class.
                                     class ParentClassName{
@@ -22,4 +22,28 @@ mode of inheritance---        public         public------->public
                               private        private------>N.A
 
 types of inheritance--single inh / multi-level / multiple / hybrid / heirarchial
-single inheritance--
+single inheritance-- the above one we discused of human to male or female H->M
+multilevel inheritance-- A->B->C->D
+multiple inheritance-- classC has both classA and classB props and functions.
+                             class Human{
+                             };
+                             class Animal{
+                             };
+                             class Male:public Human, public Animal{
+                             };
+hierarchial inheritance-- one class serve as parent class for more than one class
+                             class Human{
+                             };
+                             class Female:public Human{
+                             };
+                             class Male:public Human{
+                             };
+hybrid inheritance-- combination of different types of inheritance
+                             class Human{
+                             };
+                             class Female:public Human{
+                             };
+                             class Male:public Human, public Female{
+                             };
+
+inheritance ambiguity--- 
