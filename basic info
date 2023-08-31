@@ -1,0 +1,8 @@
+ll is a linear data structure made up with collection of nodes.
+why LL!!!--array cant be changed on runtime.Vector also is not optimal.
+           LL is dynamic DS.no memory wastage
+           To insert or delete, we dont need to shift nodes unlike array.
+           Data is stored in heap.
+types of LL--> 1.singly LL
+               2.doubly LL
+               3.circular LL
