@@ -1,0 +1,15 @@
+creation of class
+properties of class
+object for class
+size of empty class is 1 byte not 0
+class can also be defined in other cpp file and used in current file using #include "otherfilename.cpp"
+by default the properties of class are in private mode
+we have access modifiers---public / private / protected
+private means the properties can be accessed only inside the class
+public means the properties can be aaccessed in both class as well as main
+properties can be accessed using dot operator after var name of object (var.property)
+value of properties can be supplied through dot opertor only
+if property is private in class and we want to access it in main, we use getter and setter
+study ---padding and greedy allignment in class
+allocation of ' classname var ' can be by both statically or dynamically
+for accessing dynamically allocated , either star or arrow can be used
