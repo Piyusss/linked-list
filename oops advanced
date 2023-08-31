@@ -50,3 +50,19 @@ inheritance ambiguity--- A->C & B>C
                          when C tries to access a function that is present in both A and B then it cannot be accessed through normal method.
                          This is solved by scope resoltion operator '::'.
                          objectOfC.A::func();
+
+polymorphism-- or,many+forms
+types of polymorphism--- compile-time p.
+                         run-time p.
+               1.Compile-Time polymorphism-(also called as static polymorphism)-->it has function overloading & operator overloading.
+                                           Function overloading--In function overloading,same function can be used in a class but it should have different input parameters.
+                                                                 These functions are said to be overloaded.
+                                           Operator overloading--used for other purpose rather than normal purpose.
+                                                                 Nearly all opeartors can be overloaded except '::' '.*' '.' '?:'
+
+               2.Run-Time polymorphism-(also called as Dynamic polymorphism)-->it has method overriding or function overriding.
+                                           Method overriding--same function name and same input parameters.
+                                                              It is possible through inheritance only.
+
+abstraction-- Implementation hiding
+for details of all these CONCEPTS visit CoDing NInjas.
