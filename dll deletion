@@ -1,0 +1,109 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Node{
+    public:
+    int data;
+    Node* prev;
+    Node* next;
+
+    //constructor
+    Node(int d){
+        this->data=d;
+        this->prev=NULL;
+        this->next=NULL;
+    }
+    ~Node(){
+        if(next!=NULL){
+            delete next;
+            next=NULL;
+        }
+    }
+};
+
+void print(Node* &head){
+    Node* temp=head;
+    while(temp!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+    cout<<endl;
+}
+int len(Node* &head){
+    Node* temp=head;int cnt=0;
+    while(temp!=NULL){
+        cnt++;
+        temp=temp->next;
+    }
+    return cnt;
+}
+
+void iah(Node* &head,int d){
+    Node* nb=new Node(d);
+    nb->next=head;
+    head->prev=nb;
+    head=nb;
+}
+
+void iat(Node* &tail,int d){
+    Node* ne=new Node(d);
+    tail->next=ne;
+    ne->prev=tail;
+    tail=ne;
+}
+
+void iam(Node* &head,Node* &tail,int pos,int d){
+    if(pos==1)iah(head,d);
+    else{
+        Node* nm=new Node(d);
+        Node* temp=head;int cnt=1;
+        while(cnt<pos-1){
+        temp=temp->next;
+        cnt++;
+    }
+    Node* htbs=temp->next;
+    if(temp->next==NULL)iat(tail,d);
+    else{
+    temp->next=nm;nm->prev=temp;nm->next=htbs;htbs->prev=nm;
+    }
+  }
+}
+
+void dap(int pos,Node* &head,Node* &tail){
+    if(pos==1){
+        Node* temp=head;Node* nxt=head->next;
+        temp->next=NULL;
+        nxt->prev=NULL;
+        delete(head);
+        head=nxt;
+    }
+    else{
+        Node* temp=head;Node* tempf=head->next;
+        int cnt=1;
+        while(cnt<pos-1){
+            temp=temp->next;tempf=tempf->next;
+            cnt++;
+        }
+        temp->next=tempf->next;
+        tempf->prev=NULL;int flag=0;
+        if(tempf->next==NULL){
+            tail=temp;flag=1;
+        }
+        if(flag==0){
+            tempf->next->prev=temp;
+            tempf->next=NULL;
+        }
+        delete tempf;
+    }
+}
+int main(){
+    Node* n1=new Node(10);
+    Node* head=n1;
+    Node* tail=n1;print(head);cout<<len(head)<<endl;
+
+    iah(head,11);print(head);cout<<len(head)<<endl;
+    iat(tail,44);print(head);cout<<len(head)<<endl;
+    iam(head,tail,2,69);print(head);cout<<len(head)<<endl;
+
+    dap(4,head,tail);print(head);cout<<len(head)<<endl;cout<<head->data<<" "<<tail->data;
+}
