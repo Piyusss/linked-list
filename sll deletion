@@ -1,0 +1,20 @@
+void dap(int pos,Node* &head){
+    if(pos==1){
+        Node* dmp=head;
+        head=head->next;
+        dmp->next=NULL;
+        delete dmp;
+    }
+    else{
+        Node* prev=NULL;Node* curr=head;
+        int cnt=1;
+        while(cnt<pos){
+            prev=curr;
+            curr=curr->next;
+            cnt++;
+        }
+        prev->next=curr->next;
+        curr->next=NULL;
+        delete curr;
+    }
+}
