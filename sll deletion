@@ -56,13 +56,13 @@ void dap(int pos,Node* &head){
         delete dmp;
     }
     else{
-        Node* prev=NULL;Node* curr=head;
+        Node* prev=head;Node* curr=head->next;
         int cnt=1;
-        while(cnt<pos){
-            prev=curr;
-            curr=curr->next;
+        while(cnt<pos-1){
+            prev=prev->next;curr=curr->next;
             cnt++;
         }
+        Node* temp=curr;
         prev->next=curr->next;
         curr->next=NULL;
         delete curr;
