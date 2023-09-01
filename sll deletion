@@ -48,7 +48,7 @@ void iam(Node* &head,Node* &tail,int d,int pos){
     temp->next=nm;
 }
 
-void dap(int pos,Node* &head){
+void dap(int pos,Node* &head,Node* &tail){
     if(pos==1){
         Node* dmp=head;
         head=head->next;
@@ -62,8 +62,10 @@ void dap(int pos,Node* &head){
             prev=prev->next;curr=curr->next;
             cnt++;
         }
-        Node* temp=curr;
         prev->next=curr->next;
+        if(curr->next==NULL){
+            tail=prev;
+        }
         curr->next=NULL;
         delete curr;
     }
@@ -85,5 +87,6 @@ int main(){
     iah(head,12);print(head);
     iat(tail,4);print(head);
     iam(head,tail,70,4);print(head);
-    dap(4,head);print(head);
+    dap(4,head,tail);print(head);
+    cout<<head->data<<" "<<tail->data;
 }
