@@ -1,0 +1,12 @@
+void removeLoop(Node* &head){
+    map<Node*,bool>visited;
+    Node* temp=head;Node* prev=NULL;
+    while(temp!=NULL){
+        if(visited[temp]){
+            prev->next=NULL;break;
+        }
+        visited[temp]=true;
+        prev=temp;
+        temp=temp->next;
+    }
+}
