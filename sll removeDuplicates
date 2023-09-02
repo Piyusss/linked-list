@@ -1,0 +1,16 @@
+Node* removeDuplicates(Node* &head){
+    //empty-list
+    if(head==NULL)return NULL;
+
+    Node* curr=head;
+    while(curr->next!=NULL){
+        if(curr->data==curr->next->data){
+            Node* temp=curr->next;
+            curr->next=curr->next->next;
+            temp->next=NULL;
+            delete(temp);
+        }
+        else curr=curr->next;
+    }
+    return head;
+}
