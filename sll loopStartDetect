@@ -1,0 +1,11 @@
+Node* detectLoopStart(Node* &head){
+    if(head==NULL)return NULL;
+    map<Node*,bool>visited;
+    Node* temp=head;
+    while(temp!=NULL){
+        if(visited[temp])return temp;
+        visited[temp]=true;
+        temp=temp->next;
+    }
+    return NULL;
+}
