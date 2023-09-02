@@ -1,0 +1,15 @@
+Node* revKStepsAtTime(Node* &head,int k){
+    if(head==NULL)return NULL;
+
+    //reverse first k  nodes
+    Node* prev=NULL;
+    Node* curr=head;
+    int cnt=1;
+    while(curr!=NULL && cnt<=k){
+        curr->next=prev;
+        prev=curr;curr=curr->next;
+        cnt++;
+    }
+    //recursion-handles
+    if(curr->next!=NULL)head->next=revKStepsAtTime(curr->next,k);
+}
