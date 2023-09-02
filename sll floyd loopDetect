@@ -10,3 +10,5 @@ bool floydDetectLoop(Node* &head){
     }
     return 0;
 }
+
+note:-- distance bw slow and fast decreases by one in each cycle, thus they met.
