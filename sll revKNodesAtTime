@@ -12,4 +12,5 @@ Node* revKStepsAtTime(Node* &head,int k){
     }
     //recursion-handles
     if(curr->next!=NULL)head->next=revKStepsAtTime(curr->next,k);
+    return prev;
 }
