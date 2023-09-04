@@ -8,7 +8,7 @@ class Node{
 
     //constructor
     Node(int d){
-        this->data=data;
+        this->data=d;
         this->next=NULL;
     }
     //destructor
@@ -50,8 +50,14 @@ void print(Node* tail){
 
 int main(){
     Node* tail=NULL;
-    ins(tail,5,3);
-    print(tail);
+    ins(tail,5,3);print(tail);cout<<tail->data<<endl;
+    ins(tail,3,11);print(tail);cout<<tail->data<<endl;
+    ins(tail,11,44);print(tail);cout<<tail->data<<endl;
 
+    Node* temp=tail;
+    while(temp->data!=44){
+        temp=temp->next;
+    }
+    cout<<temp->next->data;
     return 0;
 }
