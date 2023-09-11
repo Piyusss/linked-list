@@ -1,6 +1,6 @@
 Node* getMid(Node* head ) {
         Node* slow = head;
-        Node* fast = head -> next;
+        Node* fast = head;
         
         while(fast != NULL && fast-> next != NULL) {
             fast = fast -> next -> next;
